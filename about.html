@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Personal Website</title>
+  <style>
+    /* リセット */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #020016; }
+    /* ナビゲーション */
+    .navbar {
+      background-color: #020016;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 60px;
+    }
+    .navbar .logo img {
+      height: 40px;
+    }
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    /* Hero セクション */
+    .hero {
+      position: relative;
+      width: 100%;
+      background-color: #f0f0f0;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .hero .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      line-height: 1.4;
+    }
+    .overlay-name-en {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.75rem;
+      color: white;
+      display: block;
+    }
+    .overlay-name-ja {
+      /* font-family: '游明朝', 'Yu Mincho', serif; */
+      font-size: 1rem;
+      color: white;
+      display: block;
+      margin-top: 0.15em;
+    }
+    /* キャリアセクション */
+    .career {
+      background-color: #020016;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    .career-title {
+      /* font-family: 'Times New Roman', serif; */
+      font-size: 1rem;
+      margin: 0;
+      color: white;
+    }
+    .career-list {
+      max-width: 450px;
+      margin: 20px auto 0;
+      text-align: left;
+    }
+    .career-list p {
+      margin-top: 1em;
+      font-size: 1rem;
+      color: white;
+      line-height: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="figure/logo.png" alt="Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Portofolio</a>
+      <a href="#">Blog</a>
+    </div>
+  </nav>
+
+  <!-- Hero（Tape Image + テキスト） -->
+  <div class="hero">
+    <img src="figure/tape.png" alt="Tape Image">
+    <div class="overlay">
+      <span class="overlay-name-en"><b>Tomoki Takazawa</b></span>
+      <span class="overlay-name-ja">高澤 知起</span>
+    </div>
+  </div>
+
+  <!-- Career セクション -->
+  <section class="career">
+    <h2 class="career-title">Carrer</h2>
+    <div class="career-list">
+      <p>2021.03　大阪大学基礎工学部システム科学科 卒業</p>
+      <p>2023.03　大阪大学大学院基礎工学研究科機能創成専攻 卒業</p>
+    </div>
+  </section>
+
+</body>
+</html>
