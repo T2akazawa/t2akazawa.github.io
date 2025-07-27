@@ -3,10 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ようこそ My GitHub Page</title>
+  <title>Personal Website</title>
+  <style>
+    /* リセット */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ナビゲーションバー */
+    .navbar {
+      background-color: #020018;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 60px;
+    }
+    .navbar .logo img {
+      height: 40px;
+    }
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* メイン画像 */
+    .main-image {
+      width: 100%;
+      height: calc(100vh - 60px);
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <h1>はじめまして！</h1>
-  <p>これは GitHub Pages で公開したサンプルページです。</p>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#"><img src="figure/logo.png" alt="Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Portofolio</a>
+      <a href="#">Blog</a>
+    </div>
+  </nav>
+  <img src="figure/main.png" alt="Main Image" class="main-image">
 </body>
 </html>
