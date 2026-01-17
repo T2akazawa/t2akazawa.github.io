@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Personal Website</title>
+  <title>Skills | Tomoki Takazawa</title>
+  <meta name="description"
+      content="Skills of Tomoki Takazawa, focusing on digital twins, laboratory automation, robotics, and AI research." />
   <style>
     /* リセット */
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,42 +47,52 @@
       text-align: center;
       line-height: 1.4;
     }
-    .overlay-name-en {
+    .overlay-en {
       font-family: 'Times New Roman', serif;
       font-size: 1.75rem;
       color: white;
       display: block;
     }
-    .overlay-name-ja {
-      /* font-family: '游明朝', 'Yu Mincho', serif; */
-      font-size: 1rem;
-      color: white;
-      display: block;
-      margin-top: 0.15em;
-    }
-    /* キャリアセクション */
-    .career {
+    /* スキルセクション */
+    .skill {
       background-color: #020016;
       text-align: center;
       padding-top: 20px;
       padding-bottom: 40px;
     }
-    .career-title {
+    .skill-title {
       /* font-family: 'Times New Roman', serif; */
       font-size: 1rem;
       margin: 0;
       color: white;
     }
-    .career-list {
+    .skill-list {
       max-width: 350px;
       margin: 20px auto 0;
       text-align: left;
     }
-    .career-list p {
+    .skill-list p {
       margin-top: 1em;
       font-size: 1rem;
       color: white;
       line-height: 0.4;
+    }
+    .skill-item {
+      display: grid;
+      grid-template-columns: 90px 1fr; /* 日付 | 本文 */
+      column-gap: 16px;
+      margin-top: 1.4em;
+    }
+    .skill-date {
+      color: #aaa;
+      font-size: 1rem;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .skill-body {
+      color: white;
+      font-size: 1rem;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -93,8 +105,8 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="#">Skill</a>
-      <a href="#">Portofolio</a>
+      <a href="skill.html">Skill</a>
+      <a href="publications.html">Publications</a>
       <a href="blog.html">Blog</a>
     </div>
   </nav>
@@ -103,17 +115,28 @@
   <div class="hero">
     <img src="figure/tape.png" alt="Tape Image">
     <div class="overlay">
-      <span class="overlay-name-en"><b> Skills </b></span>
+      <span class="overlay-en"><b> Skill </b></span>
     </div>
   </div>
 
-  <!-- Career セクション -->
-  <section class="career">
-    <h2 class="career-title">資格・検定</h2>
-    <div class="career-list">
-      <p>2023.10　　基本情報技術者試験 合格</p>
-      <p>2024.04　　応用情報技術者試験 合格</p>
-      <p>2025.07　　G検定 合格</p>
+  <!-- Skill セクション -->
+  <section class="skill">
+    <h2 class="skill-title">Certifications</h2>
+    <div class="skill-list">
+      <div class="skill-item">
+        <div class="skill-date">2023.10</div>
+        <div class="skill-body">
+          基本情報技術者試験 合格
+        </div>
+        <div class="skill-date">2024.04</div>
+        <div class="skill-body">
+          応用情報技術者試験 合格
+        </div>
+        <div class="skill-date">2025.07</div>
+        <div class="skill-body">
+          G検定 合格
+        </div>
+      </div>
     </div>
   </section>
 
