@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Personal Website</title>
+  <style>
+    /* リセット */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #020016; font-family: sans-serif; }
+    /* ナビゲーション */
+    .navbar {
+      background-color: #020016;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 60px;
+    }
+    .navbar .logo img { height: 40px; }
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    /* Blog ヘッダー */
+    .blog-header {
+      text-align: center;
+      font-size: 1rem;
+      margin: 20px 0;
+    }
+    .blog-header h2 {
+      display: inline-block;
+      background-color: #020016;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 4px;
+    }
+    /* Qiita プレビュー */
+    .blog-list blockquote{
+      max-width: 800px;
+      max-height: 400px;
+      margin: 10px auto;
+      margin-bottom: 50px;
+      /* display: flex; */
+      /* flex-direction: column; */
+      gap: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="figure/logo.png" alt="Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Portofolio</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <!-- Blog タイトル -->
+  <div class="blog-header">
+    <h2>Blog</h2>
+  </div>
+
+  <div class="blog-list">
+    <div class="blog-list-responsive" style="height: 170px; padding-bottom: 0;">
+        <a href="https://link.springer.com/article/10.1007/s00422-024-00993-0" data-iframely-url="//iframely.net/hZjLWvNH?theme=light"></a>
+        <a href="https://qiita.com/NavyResearch/items/debd119a6e19a4841613" data-iframely-url="//iframely.net/s7zrZVxU?theme=light"></a>
+    </div>
+  </div>
+  
+  <script async src="//iframely.net/embed.js"></script>
+</body>
+</html>
