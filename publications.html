@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications | Tomoki Takazawa</title>
+  <meta name="description"
+      content="Publications of Tomoki Takazawa, focusing on digital twins, laboratory automation, robotics, and AI research." />
+  <style>
+    /* リセット */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #020016; }
+    /* ナビゲーション */
+    .navbar {
+      background-color: #020016;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 60px;
+    }
+    .navbar .logo img {
+      height: 40px;
+    }
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    /* Hero セクション */
+    .hero {
+      position: relative;
+      width: 100%;
+      background-color: #f0f0f0;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .hero .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      line-height: 1.4;
+    }
+    .overlay-en {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.75rem;
+      color: white;
+      display: block;
+    }
+    /* パブリケーションセクション */
+    .publication {
+      background-color: #020016;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    .publication-title {
+      /* font-family: 'Times New Roman', serif; */
+      font-size: 1rem;
+      margin: 0;
+      color: white;
+    }
+    .publication-list {
+      max-width: 1000px;
+      margin: 20px auto 0;
+      text-align: left;
+    }
+    .publication-list p {
+      margin-top: 1em;
+      font-size: 1rem;
+      color: white;
+      line-height: 1.5;
+    }
+    .pub-item {
+      display: grid;
+      grid-template-columns: 90px 1fr; /* 日付 | 本文 */
+      column-gap: 16px;
+      margin-top: 1.4em;
+    }
+    .pub-date {
+      color: #aaa;
+      font-size: 1rem;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .pub-body {
+      color: white;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .conference-title {
+      /* font-family: 'Times New Roman', serif; */
+      font-size: 1rem;
+      margin-top: 60px;
+      margin-bottom: 0;
+      color: white;
+    }
+    .conference-list {
+      max-width: 1000px;
+      margin: 20px auto 0;
+      text-align: left;
+    }
+    .conference-list p {
+      margin-top: 1em;
+      font-size: 1rem;
+      color: white;
+      line-height: 1.5;
+    }
+    .con-item {
+      display: grid;
+      grid-template-columns: 90px 1fr; /* 日付 | 本文 */
+      column-gap: 16px;
+      margin-top: 1.4em;
+    }
+    .con-date {
+      color: #aaa;
+      font-size: 1rem;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .con-body {
+      color: white;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="figure/logo.png" alt="Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skill.html">Skill</a>
+      <a href="publications.html">Publications</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <!-- Hero（Tape Image + テキスト） -->
+  <div class="hero">
+    <img src="figure/tape.png" alt="Tape Image">
+    <div class="overlay">
+      <span class="overlay-en"><b>Publications</b></span>
+    </div>
+  </div>
+
+  <!-- Publication セクション -->
+  <section class="publication">
+    <h2 class="publication-title">Publications</h2>
+    <div class="publication-list">
+      <div class="pub-item">
+        <div class="pub-date">2024.07</div>
+        <div class="pub-body">
+          Takazawa, T., Suzuki, Y., Nakamura, A., Matsuo, R., Morasso, P., & Nomura, T. (2024).
+          How the brain can be trained to achieve an intermittent control strategy for stabilizing quiet stance by means of reinforcement learning.
+          <i>Biological Cybernetics</i>, 118(3), 229–248.
+        </div>
+      </div>
+    </div>
+    <h2 class="conference-title">Conferences</h2>
+    <div class="conference-list">
+      <div class="con-item">
+        <div class="con-date">2023.01</div>
+        <div class="con-body">
+          高澤 知起, 鈴木 康之, 中村 晃大, 松尾 理沙, 野村 泰伸, ヒト静止立位姿勢の間欠フィードバック制御を強化学習的に獲得する報酬関数の探索, <i>第35回 自律分散システム・シンポジウム</i>, 大阪工業大学（口頭）
+        </div>
+        <div class="con-date">2022.08</div>
+        <div class="con-body">
+          高澤 知起, 鈴木 康之, 中村 晃大, 松尾 理沙, 野村 泰伸, ヒト静止立位姿勢の間欠フィードバック制御を生成する報酬関数の順強化学習的探索, <i>第16回 Motor Control研究会</i>, 早稲田大学（セレクトトーク・ポスター）
+        </div>
+        <div class="con-date">2022.03</div>
+        <div class="con-body">
+          高澤 知起, 鈴木 康之, 中村 晃大, 野村 泰伸, 状態依存的比例微分制御を仮定した強化学習による倒立振子安定化は間欠制御戦略を生成する, <i>電子情報通信学会</i>, オンライン（口頭）
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
