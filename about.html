@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Personal Website</title>
+  <title>Career | Tomoki Takazawa</title>
+  <meta name="description"
+      content="Career of Tomoki Takazawa, focusing on digital twins, laboratory automation, robotics, and AI research." />
   <style>
     /* リセット */
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -72,7 +74,7 @@
       color: white;
     }
     .career-list {
-      max-width: 450px;
+      max-width: 750px;
       margin: 20px auto 0;
       text-align: left;
     }
@@ -81,6 +83,23 @@
       font-size: 1rem;
       color: white;
       line-height: 0.4;
+    }
+    .career-item {
+      display: grid;
+      grid-template-columns: 90px 1fr; /* 日付 | 本文 */
+      column-gap: 16px;
+      margin-top: 1.4em;
+    }
+    .career-date {
+      color: #aaa;
+      font-size: 1rem;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .career-body {
+      color: white;
+      font-size: 1rem;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -94,7 +113,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="skill.html">Skill</a>
-      <a href="#">Portofolio</a>
+      <a href="publications.html">Publications</a>
       <a href="blog.html">Blog</a>
     </div>
   </nav>
@@ -110,11 +129,22 @@
 
   <!-- Career セクション -->
   <section class="career">
-    <h2 class="career-title">Carrer</h2>
+    <h2 class="career-title">Career</h2>
     <div class="career-list">
-      <p>2021.03　　大阪大学基礎工学部システム科学科 卒業</p>
-      <p>2023.03　　大阪大学大学院基礎工学研究科機能創成専攻 卒業</p>
-      <p>2023.04～　分析計測機器メーカー 研究所 勤務</p>
+      <div class="career-item">
+        <div class="career-date">2021.03</div>
+        <div class="career-body">
+          大阪大学 基礎工学部 システム科学科 生物工学コース 卒業（工学）
+        </div>
+        <div class="career-date">2023.03</div>
+        <div class="career-body">
+          大阪大学大学院 基礎工学研究科 機能創成専攻 生体工学領域 博士前期課程 修了（工学）
+        </div>
+        <div class="career-date">2023.04～</div>
+        <div class="career-body">
+          分析計測機器メーカー 研究所 勤務
+        </div>
+      </div>
     </div>
   </section>
 
