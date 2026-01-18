@@ -28,6 +28,20 @@
       margin-left: 20px;
       font-size: 16px;
     }
+    /* ホバーエフェクト */
+    .navbar .nav-links a {
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 
+        background-color 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+        color 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+        letter-spacing 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+    }
+    .navbar .nav-links a:hover {
+      background: #fff;
+      color: #020016;
+      letter-spacing: 0.15em;
+    }
     /* Hero セクション */
     .hero {
       position: relative;
@@ -53,17 +67,186 @@
       color: white;
       display: block;
     }
+
+    /* 言語セクション */
+    .languages {
+      background-color: #020016;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .languages-title {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .languages-list {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #aaa;
+    }
+    .language-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70px;
+      text-align: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .language-item img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .language-item span {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .language-item:hover {
+      transform: translateY(-4px);
+      opacity: 0.85;
+    }
+
+    /* フレームワークセクション */
+    .frameworks {
+      background-color: #020016;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .frameworks-title {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .frameworks-list {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #aaa;
+    }
+    .framework-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70px;
+      text-align: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .framework-item img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .framework-item span {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .framework-item:hover {
+      transform: translateY(-4px);
+      opacity: 0.85;
+    }
+
+    /* ツールセクション */
+    .tools {
+      background-color: #020016;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .tools-title {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .tools-list {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #aaa;
+    }
+    .tool-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70px;
+      text-align: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .tool-item img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .tool-item span {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .tool-item:hover {
+      transform: translateY(-4px);
+      opacity: 0.85;
+    }
+
+    /* 環境セクション */
+    .environments {
+      background-color: #020016;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .environments-title {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .environments-list {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #aaa;
+    }
+    .environment-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70px;
+      text-align: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .environment-item img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .environment-item span {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .environment-item:hover {
+      transform: translateY(-4px);
+      opacity: 0.85;
+    }
+
     /* スキルセクション */
     .skill {
       background-color: #020016;
       text-align: center;
-      padding-top: 20px;
+      padding-top: 10px;
       padding-bottom: 40px;
     }
     .skill-title {
-      /* font-family: 'Times New Roman', serif; */
       font-size: 1rem;
-      margin: 0;
+      margin-top: 50px;
+      margin-bottom: 0;
       color: white;
     }
     .skill-list {
@@ -94,8 +277,45 @@
       font-size: 1rem;
       line-height: 1.6;
     }
+
+    /* フェードイン（ページ読み込み時） */
+    body {
+      opacity: 0;
+      animation: fadeIn 2.5s ease forwards;
+    }
+    /* フェードアウト（ページ遷移時） */
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 2.5s ease;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
+<script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', e => {
+      const url = link.getAttribute('href');
+
+      // 除外条件
+      if (
+        url.startsWith('#') ||
+        url.startsWith('http') ||
+        link.target === '_blank'
+      ) return;
+
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400);
+    });
+  });
+</script>
 <body>
   <!-- ナビゲーション -->
   <nav class="navbar">
@@ -113,11 +333,131 @@
 
   <!-- Hero（Tape Image + テキスト） -->
   <div class="hero">
-    <img src="figure/tape.png" alt="Tape Image">
+    <img src="figure/tape_short.png" alt="Tape Image">
     <div class="overlay">
       <span class="overlay-en"><b> Skill </b></span>
     </div>
   </div>
+
+  <!-- Programming Language セクション -->
+  <section class="languages">
+    <h2 class="languages-title">Programming Languages</h2>
+    <div class="languages-list">
+      <div class="language-item">
+        <img src="figure/logo_python.png" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="language-item">
+        <img src="figure/logo_matlab.png" alt="MATLAB">
+        <span>MATLAB</span>
+      </div>
+      <div class="language-item">
+        <img src="figure/logo_r.png" alt="R">
+        <span>R</span>
+      </div>
+      <div class="language-item">
+        <img src="figure/logo_csharp.png" alt="C#">
+        <span>C#</span>
+      </div>
+      <div class="language-item">
+        <img src="figure/logo_javascript.png" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+      <div class="language-item">
+        <img src="figure/logo_html.png" alt="HTML">
+        <span>HTML</span>
+      </div>
+      <div class="language-item">
+        <img src="figure/logo_CSS.png" alt="CSS">
+        <span>CSS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frameworks セクション -->
+  <section class="frameworks">
+    <h2 class="frameworks-title">Frameworks　/　Libraries</h2>
+    <div class="frameworks-list">
+      <div class="framework-item">
+        <img src="figure/logo_ros.png" alt="ROS">
+        <span>ROS</span>
+      </div>
+      <div class="framework-item">
+        <img src="figure/logo_moveit.png" alt="MoveIt">
+        <span>MoveIt</span>
+      </div>
+      <div class="framework-item">
+        <img src="figure/logo_pytorch.png" alt="PyTorch">
+        <span>PyTorch</span>
+      </div>
+      <div class="framework-item">
+        <img src="figure/logo_opencv.png" alt="OpenCV">
+        <span>OpenCV</span>
+      </div>
+      <div class="framework-item">
+        <img src="figure/logo_qt.png" alt="Qt">
+        <span>Qt</span>
+      </div>
+      <div class="framework-item">
+        <img src="figure/logo_meshlib.png" alt="MeshLib">
+        <span>MeshLib</span>
+      </div>
+      <div class="framework-item">
+        <img src="figure/logo_mediapipe.png" alt="MediaPipe">
+        <span>MediaPipe</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools セクション -->
+  <section class="tools">
+    <h2 class="tools-title">Tools</h2>
+    <div class="tools-list">
+      <div class="tool-item">
+        <img src="figure/logo_vscode.png" alt="VSCode">
+        <span>VSCode</span>
+      </div>
+      <div class="tool-item">
+        <img src="figure/logo_docker.png" alt="Docker">
+        <span>Docker</span>
+      </div>
+      <div class="tool-item">
+        <img src="figure/logo_wsl.png" alt="WSL">
+        <span>WSL</span>
+      </div>
+      <div class="tool-item">
+        <img src="figure/logo_git.png" alt="Git">
+        <span>Git</span>
+      </div>
+      <div class="tool-item">
+        <img src="figure/logo_conda.png" alt="Conda">
+        <span>Conda</span>
+      </div>
+      <div class="tool-item">
+        <img src="figure/logo_blender.png" alt="Blender">
+        <span>Blender</span>
+      </div>
+      <div class="tool-item">
+        <img src="figure/logo_novnc.png" alt="noVNC">
+        <span>noVNC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Environments セクション -->
+  <section class="environments">
+    <h2 class="environments-title">Environments</h2>
+    <div class="environments-list">
+      <div class="environment-item">
+        <img src="figure/logo_windows.png" alt="Windows">
+        <span>Windows</span>
+      </div>
+      <div class="environment-item">
+        <img src="figure/logo_ubuntu.png" alt="Ubuntu">
+        <span>Ubuntu</span>
+      </div>
+    </div>
+  </section>
 
   <!-- Skill セクション -->
   <section class="skill">
@@ -139,6 +479,5 @@
       </div>
     </div>
   </section>
-
 </body>
 </html>
