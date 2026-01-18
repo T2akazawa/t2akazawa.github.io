@@ -28,6 +28,20 @@
       margin-left: 20px;
       font-size: 16px;
     }
+    /* ホバーエフェクト */
+    .navbar .nav-links a {
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 
+        background-color 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+        color 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+        letter-spacing 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+    }
+    .navbar .nav-links a:hover {
+      background: #fff;
+      color: #020016;
+      letter-spacing: 0.15em;
+    }
     /* Hero セクション */
     .hero {
       position: relative;
@@ -60,11 +74,138 @@
       display: block;
       margin-top: 0.15em;
     }
+
+    /* ロボティクスセクション */
+    .robotics {
+      background-color: #020016;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .robotics-title {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .robotics-list {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #aaa;
+    }
+    .robotics-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .robotics-item img {
+      width: 200px;
+      height: 100px;
+      object-fit: contain;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .robotics-item span {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .robotics-item:hover {
+      transform: translateY(-4px);
+      opacity: 0.85;
+    }
+
+    /* コンピュータビジョンセクション */
+    .computervision {
+      background-color: #020016;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .computervision-title {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .computervision-list {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #aaa;
+    }
+    .computervision-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 150px;
+      text-align: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .computervision-item img {
+      width: 150px;
+      height: 100px;
+      object-fit: contain;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .computervision-item span {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .computervision-item:hover {
+      transform: translateY(-4px);
+      opacity: 0.85;
+    }
+
+    /* 人セクション */
+    .human {
+      background-color: #020016;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .human-title {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .human-list {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #aaa;
+    }
+    .human-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 150px;
+      text-align: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .human-item img {
+      width: 150px;
+      height: 100px;
+      object-fit: contain;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .human-item span {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .human-item:hover {
+      transform: translateY(-4px);
+      opacity: 0.85;
+    }
+
     /* キャリアセクション */
     .career {
       background-color: #020016;
       text-align: center;
-      padding-top: 20px;
+      padding-top: 60px;
       padding-bottom: 40px;
     }
     .career-title {
@@ -101,8 +242,45 @@
       font-size: 1rem;
       line-height: 1.6;
     }
+
+    /* フェードイン（ページ読み込み時） */
+    body {
+      opacity: 0;
+      animation: fadeIn 2.5s ease forwards;
+    }
+    /* フェードアウト（ページ遷移時） */
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 2.5s ease;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
+<script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', e => {
+      const url = link.getAttribute('href');
+
+      // 除外条件
+      if (
+        url.startsWith('#') ||
+        url.startsWith('http') ||
+        link.target === '_blank'
+      ) return;
+
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400);
+    });
+  });
+</script>
 <body>
   <!-- ナビゲーション -->
   <nav class="navbar">
@@ -126,6 +304,55 @@
       <span class="overlay-name-ja">高澤 知起</span>
     </div>
   </div>
+
+  <!-- Robotics セクション -->
+  <section class="robotics">
+    <h2 class="robotics-title">Robotics</h2>
+    <div class="robotics-list">
+      <div class="robotics-item">
+        <img src="figure/icon_motionplanning.png" alt="Motion Planning">
+        <span>動作経路計画</span>
+      </div>
+      <div class="robotics-item">
+        <img src="figure/icon_labautomation.png" alt="Lab Automation">
+        <span>ラボラトリオートメーション</span>
+      </div>
+      <div class="robotics-item">
+        <img src="figure/icon_digitaltwin.png" alt="Digital Twin">
+        <span>デジタルツイン</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Computer Vision セクション -->
+  <section class="computervision">
+    <h2 class="computervision-title">Computer Vision</h2>
+    <div class="computervision-list">
+      <div class="computervision-item">
+        <img src="figure/icon_poseestimation_object.png" alt="Posture Estimation (Object)">
+        <span>姿勢推定（物体）</span>
+      </div>
+      <div class="robotics-item">
+        <img src="figure/icon_poseestimation_human.png" alt="Posture Estimation (Human)">
+        <span>姿勢推定（人）</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Human セクション -->
+  <section class="human">
+    <h2 class="human-title">Human Brain</h2>
+    <div class="human-list">
+      <div class="human-item">
+        <img src="figure/icon_posturecontrol.png" alt="Posture Control">
+        <span>立位姿勢制御</span>
+      </div>
+      <div class="robotics-item">
+        <img src="figure/icon_reinforcementlearning.png" alt="Reinforcement Learning">
+        <span>強化学習</span>
+      </div>
+    </div>
+  </section>
 
   <!-- Career セクション -->
   <section class="career">
