@@ -28,6 +28,20 @@
       margin-left: 20px;
       font-size: 16px;
     }
+    /* ホバーエフェクト */
+    .navbar .nav-links a {
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 
+        background-color 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+        color 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+        letter-spacing 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+    }
+    .navbar .nav-links a:hover {
+      background: #fff;
+      color: #020016;
+      letter-spacing: 0.15em;
+    }
     /* Hero セクション */
     .hero {
       position: relative;
@@ -129,8 +143,45 @@
       font-size: 1rem;
       line-height: 1.6;
     }
+
+    /* フェードイン（ページ読み込み時） */
+    body {
+      opacity: 0;
+      animation: fadeIn 2.5s ease forwards;
+    }
+    /* フェードアウト（ページ遷移時） */
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 2.5s ease;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
+<script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', e => {
+      const url = link.getAttribute('href');
+
+      // 除外条件
+      if (
+        url.startsWith('#') ||
+        url.startsWith('http') ||
+        link.target === '_blank'
+      ) return;
+
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400);
+    });
+  });
+</script>
 <body>
   <!-- ナビゲーション -->
   <nav class="navbar">
@@ -148,7 +199,7 @@
 
   <!-- Hero（Tape Image + テキスト） -->
   <div class="hero">
-    <img src="figure/tape.png" alt="Tape Image">
+    <img src="figure/tape_short.png" alt="Tape Image">
     <div class="overlay">
       <span class="overlay-en"><b>Publications</b></span>
     </div>
