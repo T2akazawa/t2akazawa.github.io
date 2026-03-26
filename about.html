@@ -54,6 +54,7 @@
       position: relative;
       width: 100%;
       background-color: #f0f0f0;
+      overflow: hidden;
     }
     .hero img {
       width: 100%;
@@ -70,16 +71,18 @@
     }
     .overlay-name-en {
       font-family: 'Times New Roman', serif;
-      font-size: 1.75rem;
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
       color: white;
       display: block;
+      white-space: nowrap;
     }
     .overlay-name-ja {
       /* font-family: '游明朝', 'Yu Mincho', serif; */
-      font-size: 1rem;
+      font-size: clamp(0.8rem, 1.8vw, 1rem);
       color: white;
       display: block;
       margin-top: 0.15em;
+      white-space: nowrap;
     }
 
     /* ロボティクスセクション */
@@ -282,6 +285,33 @@
       }
       .navbar .nav-links a {
         font-size: 15px;
+      }
+      .hero img {
+        min-height: 160px;
+        object-fit: cover;
+      }
+      .hero .overlay {
+        width: calc(100% - 32px);
+      }
+      .overlay-name-en {
+        font-size: clamp(1rem, 5.2vw, 1.35rem);
+      }
+      .overlay-name-ja {
+        font-size: clamp(0.72rem, 3.2vw, 0.92rem);
+      }
+    }
+    @media (max-width: 480px) {
+      .hero img {
+        min-height: 140px;
+      }
+      .hero .overlay {
+        width: calc(100% - 24px);
+      }
+      .overlay-name-en {
+        font-size: clamp(0.92rem, 5vw, 1.15rem);
+      }
+      .overlay-name-ja {
+        font-size: clamp(0.68rem, 3vw, 0.82rem);
       }
     }
   </style>
